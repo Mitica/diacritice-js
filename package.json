@@ -1,0 +1,29 @@
+{
+  "name": "diacritice",
+  "version": "0.0.1",
+  "description": "Javascript client pentru diacritice.ai",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha -t 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mitica/diacritice-js.git"
+  },
+  "keywords": [
+    "diacritice",
+    "ai"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mitica/diacritice-js/issues"
+  },
+  "homepage": "https://github.com/Mitica/diacritice-js#readme",
+  "dependencies": {
+    "cross-fetch": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
