@@ -1,5 +1,8 @@
-
-*.log
 .DS_Store
-/node_modules/
-/dist/
+.env*
+node_modules
+*.log
+*.tgz
+lib
+types
+package-lock.json

@@ -3,10 +3,21 @@
   "version": "0.1.0",
   "description": "Javascript client pentru diacritice.ai",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "mocha -t 5000",
-    "prepublish": "npm test",
-    "build": "browserify lib/index.js | uglifyjs > dist/diacritice.js"
+    "pretest": "npm run clean && npm run tsc",
+    "test": "ava --no-cache --verbose lib/**/*.test.js",
+    "posttest": "npm run clean-test-code",
+    "tsc": "tsc",
+    "tscw": "tsc -w",
+    "preversion": "npm run tsc",
+    "postversion": "git push --follow-tags",
+    "prepublishOnly": "npm run tsc && npm run clean-test-code",
+    "clean": "rimraf ./lib",
+    "clean-test-code": "rimraf ./lib/**/*.test.js && rimraf ./lib/**/*.test.d.ts"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "repository": {
     "type": "git",
@@ -25,12 +36,10 @@
     "cross-fetch": "^1.0.0"
   },
   "devDependencies": {
-    "browserify": "^14.5.0",
-    "mocha": "^4.0.1",
-    "uglify-es": "^3.1.6"
+    "@types/node": "10.12.9",
+    "ava": "^0.25.0",
+    "rimraf": "^2.6.2",
+    "typescript": "3.1.6"
   },
-  "files": [
-    "dist"
-  ],
   "license": "MIT"
 }
