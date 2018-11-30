@@ -5,12 +5,11 @@ Un client Javascript/node pentru diacritice.ai
 
 ## Utilizare
 
-```js
+```ts
 
 import diacritice from 'diacritice'
 
-diacritice('Acasa crestem fericiti mereu')
-    .then(data => console.log(data.text))
-// output: Acasă creștem fericiți mereu
+const data = await diacritice('Acasa crestem fericiti mereu')
+// data.text == Acasă creștem fericiți mereu
 
 ```

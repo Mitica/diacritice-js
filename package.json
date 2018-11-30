@@ -1,6 +1,6 @@
 {
   "name": "diacritice",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Javascript client pentru diacritice.ai",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
